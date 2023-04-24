@@ -1,9 +1,112 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Area of a Volume or Cone" />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Jaden Plugowsky" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- Change colours here at https://getmdl.io/customize/index.html -->
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.green-light_green.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Area of a Volume/Cone Calculator</title>
   </head>
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- Page content is below this div -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title" id="header-fix">Area of a Volume/Cone</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <!-- Put non-header content HERE -->
+        <br />
+        <div class="right-image">
+          <img src="./images/blackholehd.jpg" alt="black hole image" />
+        </div>
+        <div class="mdl-content">Volume = (Length * Width * Height) / 3</div>
+        <br />
+        <!-- Numeric Textfield with Floating Label - Length -->
+        <form action="#">
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[.0-9]*(\.[.0-9]+)?"
+              id="base-length"
+            />
+            <label class="mdl-textfield__label" for="base-length">Base's Length (cm)</label>
+            <span class="mdl-textfield__error"
+              >Input is not a number or decimal!</span
+            >
+          </div>
+        </form>
+        <!-- Numeric Textfield with Floating Label - Width -->
+        <form action="#">
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[.0-9]*(\.[.0-9]+)?"
+              id="base-width"
+            />
+            <label class="mdl-textfield__label" for="base-width">Base's Width (cm)</label>
+            <span class="mdl-textfield__error"
+              >Input is not a number or decimal!</span
+            >
+          </div>
+        </form>
+        <!-- Numeric Textfield with Floating Label - Height -->
+        <form action="#">
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[.0-9]*(\.[.0-9]+)?"
+              id="height"
+            />
+            <label class="mdl-textfield__label" for="height">Height (cm)</label>
+            <span class="mdl-textfield__error"
+              >Input is not a number or decimal!</span
+            >
+          </div>
+        </form>
+        <!-- Colored raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+          id="button-one"
+          onclick="buttonOneClicked()"
+        >
+          Calculate
+        </button>
+        <br />
+        <br />
+        <!-- Answer to be replaced using JS -->
+        <div class="page-content-answer">
+          <div id="answer-area">The Area of the Pyramid/Cone's base is: ...</dive>
+          <div id="answer-volume">The Volume of the Pyramid/Cone is: ...</div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
