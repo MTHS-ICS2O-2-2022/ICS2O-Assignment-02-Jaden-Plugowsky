@@ -6,20 +6,47 @@
 
 "use strict"
 
-function buttonOneClicked() {
+function calculateVolumePressed() {
   //This function calculates the Volume of a Pyramid/Cone
   //Input through Textfields
-  const baseLength = parseFloat(document.getElementById("base-length").value)
-  const baseWidth = parseFloat(document.getElementById("base-width").value)
+  const givenArea = parseFloat(document.getElementById("given-area").value)
   const height = parseFloat(document.getElementById("height").value)
 
   //Process
-  const area = baseLength * baseWidth
-  const volume = (area * height) / 3
+  const volume = (givenArea * height) / 3
 
   //Output
-  document.getElementById("answer-area").innerHTML =
-    "The Area of the Pyramid/Cone's base is: " + area + "cm²"
   document.getElementById("answer-volume").innerHTML =
     "The Volume of the Pyramid/Cone is: " + volume.toFixed(2) + "cm³"
+}
+
+function calculateAreaRectanglePressed() {
+  //This function calculates the Area of a Rectangle with a given Length and Width
+  //Input through Textfields
+  const rectangleLength = parseFloat(
+    document.getElementById("rectangle-length").value
+  )
+  const rectangleWidth = parseFloat(
+    document.getElementById("rectangle-width").value
+  )
+
+  //Process
+  const rectangleArea = rectangleLength * rectangleWidth
+
+  //Output
+  document.getElementById("answer-area-rectangle").innerHTML =
+    "The Area of the Rectangle is: " + rectangleArea.toFixed(2) + "cm²"
+}
+
+function calculateAreaCirclePressed() {
+  //This function calculates the Area of a Circle with a given Radius
+  //Input through Textfields
+  const circleRadius = parseFloat(document.getElementById("circle-radius").value)
+
+  //Process
+  const circleArea = Math.PI * circleRadius ** 2
+
+  //Output
+  document.getElementById("answer-area-circle").innerHTML =
+    "The Area of the Circle is: " + circleArea.toFixed(2) + "cm²"
 }

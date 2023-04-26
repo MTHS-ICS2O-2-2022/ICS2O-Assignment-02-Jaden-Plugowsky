@@ -11,14 +11,13 @@
 }
 
 body {
-  background-color: lightcoral;
+  background-color: rgb(61 173 61);
 }
 
 .right-image {
   height: auto;
   width: 250px;
   float: right;
-  margin-right: 150px;
 }
 
 .mdl-content {
@@ -38,9 +37,17 @@ body {
   color: white;
 }
 
-#button-one {
+.mdl-button {
   margin-left: 60px;
   margin-top: 10px;
+}
+
+.mdl-textfield {
+  color: white;
+}
+
+#rightmost-image {
+  margin-right: 150px;
 }
 
 #header-fix {
