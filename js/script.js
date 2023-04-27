@@ -41,7 +41,9 @@ function calculateAreaRectanglePressed() {
 function calculateAreaCirclePressed() {
   //This function calculates the Area of a Circle with a given Radius
   //Input through Textfields
-  const circleRadius = parseFloat(document.getElementById("circle-radius").value)
+  const circleRadius = parseFloat(
+    document.getElementById("circle-radius").value
+  )
 
   //Process
   const circleArea = Math.PI * circleRadius ** 2
